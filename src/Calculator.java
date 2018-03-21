@@ -2,19 +2,16 @@ import java.util.Scanner;
 
 public class Calculator {
     
-    private static int num1, num2, result;
-    private static String operator;
-    
     public static void main(String[] args) {
     
         String input = getConsoleInput();
         
         String[] inputArray = input.split("\\s");
-        num1 = Integer.parseInt(inputArray[0]);
-        operator = inputArray[1];
-        num2 = Integer.parseInt(inputArray[2]);
+        int num1 = Integer.parseInt(inputArray[0]);
+        String operator = inputArray[1];
+        int num2 = Integer.parseInt(inputArray[2]);
         
-        result = calculate(num1, operator, num2);
+        int result = calculate(num1, operator, num2);
     
         System.out.println("result : "+result);
     }
